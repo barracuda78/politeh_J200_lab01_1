@@ -210,7 +210,7 @@ public class Lab1 extends HttpServlet {
         if(email.length() > 50) 
             return false;
         
-        return email.matches(".+@.+\\..{2,}"); //имеется ввиду, что в домене первого уровня может быть только 2 и более символа.
+        return email.matches("[^@]+@[^@]+\\.[^@]{2,}"); //имеется ввиду, что в домене первого уровня может быть только 2 и более символа.
     }
 
     @Override
